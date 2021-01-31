@@ -1,0 +1,4 @@
+/HealthFloodapp/static/*
+/static/*
+*.pyc
+django-key.txt
