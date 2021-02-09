@@ -31,5 +31,4 @@ class ratings(models.Model):
     rating=models.CharField(max_length=300)
     objects = models.DjongoManager()
 
-
 # Create your models here.
