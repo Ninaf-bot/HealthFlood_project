@@ -14,7 +14,8 @@ class Product extends React.Component{
     }
 
     get_data= async(id) => {
-        let data1 = await axios.get('http://127.0.0.1:8000/product=1/').then(res=>{
+        
+        let data1 = await axios.get('http://127.0.0.1:8000/product=${id}/').then(res=>{
             return res.data
         })
         console.log(data1);
