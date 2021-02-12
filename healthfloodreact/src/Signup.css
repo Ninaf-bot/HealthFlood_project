@@ -1,20 +1,20 @@
 #wrap{
-  background-image: -ms-linear-gradient(top, #FFFFFF 0%, #D3D8E8 100%);
+  background-image: -ms-linear-gradient(top, #1b0f0f 0%, #D3D8E8 100%);
   /* Mozilla Firefox */ 
-  background-image: -moz-linear-gradient(top, #FFFFFF 0%, #D3D8E8 100%);
+  background-image: -moz-linear-gradient(top, #080808 0%, #D3D8E8 100%);
   /* Opera */ 
-  background-image: -o-linear-gradient(top, #FFFFFF 0%, #D3D8E8 100%);
+  background-image: -o-linear-gradient(top, #000000 0%, #D3D8E8 100%);
   /* Webkit (Safari/Chrome 10) */ 
   background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0, #FFFFFF), color-stop(1, #D3D8E8));
   /* Webkit (Chrome 11+) */ 
-  background-image: -webkit-linear-gradient(top, #FFFFFF 0%, #D3D8E8 100%);
+  background-image: -webkit-linear-gradient(top, #0a0a0a 0%, #D3D8E8 100%);
   /* W3C Markup, IE10 Release Preview */ 
-  background-image: linear-gradient(to bottom, #FFFFFF 0%, #D3D8E8 100%);
+  background-image: linear-gradient(to bottom, #0f0f0f 0%, #D3D8E8 100%);
   background-repeat: no-repeat;
   background-attachment: fixed;
   }
   legend{
-      color:#141823;
+      color:#cadace;
       font-size:25px;
       font-weight:bold;
   }

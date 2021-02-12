@@ -1,13 +1,14 @@
-from djongo import models
-from django.contrib.auth.models import AbstractUserUser
+from django.db import models
 
-class user_mod(AbstractUserUser):
-    age=models.IntegerField()
 
-    def setage(self,age):
-        self.age=age
-    def getage(self):
-        return self.age
+class Person(models.Model):
+    first_name = models.CharField(max_length=30)
+    last_name = models.CharField(max_length=30)
 
+
+niand=Person()
+niand.first_name='ninad'
+niand.last_name='sawdekatrt'
+niand.save()
 
 # Create your models here.
