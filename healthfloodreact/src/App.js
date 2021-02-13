@@ -15,7 +15,7 @@ class App extends React.Component{
         }
         else if((this.props.usersigningup==false) & this.props.userLoggingin){
             return(
-                <Login/>
+                <Login setUsername={this.props.setUsername}/>
             )
         }
         return(
