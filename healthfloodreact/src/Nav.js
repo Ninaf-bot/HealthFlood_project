@@ -26,6 +26,7 @@ class Nav extends React.Component{
     logoutHandler=()=>{
         this.setState({username:"",userLoggedin:false,userLoggingin: false,usersigningup:false})
         console.log(this.state)
+        
     }
 
     sign_up_button_handler=event=>{
@@ -50,7 +51,7 @@ class Nav extends React.Component{
                             <ul class="main-nav">
                                 <li><a href="#" onClick={this.home_onclick_handler} >Home</a></li>
                                 <li><a href="#">Food Delivery</a></li>
-                                <li><a href="#">How it works</a></li>
+                                <li><a href="#">Products</a></li>
                                 <li><a href="#">Our cities</a></li>
                                 <li>{this.state.username}</li>
                                 <li>
@@ -72,7 +73,7 @@ class Nav extends React.Component{
                         <ul class="main-nav">
                             <li><a href="#" onClick={this.home_onclick_handler} >Home</a></li>
                             <li><a href="#">Food Delivery</a></li>
-                            <li><a href="#">How it works</a></li>
+                            <li><a href="#">Products</a></li>
                             <li><a href="#">Our cities</a></li>
                             <li>
                                 <button onClick={this.login_button_handler} >login</button>

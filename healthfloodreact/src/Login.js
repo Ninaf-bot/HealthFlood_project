@@ -11,6 +11,7 @@ class Login extends React.Component{
             username:'',
             password:'',
             userLoggedin:false,
+            Invalid_credentials:''
         }
     }
 
@@ -19,7 +20,14 @@ class Login extends React.Component{
         console.log(this.state)
         await axios.post('http://127.0.0.1:8000/login/',this.state).then(res=>{
             console.log(res);
-            this.props.setUsername(res.data.username);
+            if(res.data.loggedin==true){
+                this.props.setUsername(res.data.username);
+                this.setState({Invalid_credentials:''})
+            }
+            else{
+                this.setState({Invalid_credentials:'Invalid credentials'})
+            }
+            
         })
     }
 
@@ -40,7 +48,9 @@ class Login extends React.Component{
                 
                     <button class="btn btn-lg btn-primary btn-block signup-btn" onClick={this.onsubmithandler}>
                         login</button>
-                </form>          
+                    
+                </form>   
+                    <p>{this.state.Invalid_credentials}</p>
                 </div>
             </div>            
             </div>

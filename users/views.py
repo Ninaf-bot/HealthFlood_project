@@ -24,7 +24,7 @@ class login(APIView):
             if login_user!=None:
                 return Response({'username': login_user_data['username'], 'password': login_user_data['password'],
                                  'loggedin':True})
-            return  Response({'action':'login failed'})
+            return  Response({'loggedin':False})
 
 
 
