@@ -4,9 +4,15 @@
 /node_modules
 /.pnp
 .pnp.js
+.ppng
 
 # testing
 /coverage
+
+#static files
+/public/resources/
+/src/img
+
 
 # production
 /build

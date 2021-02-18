@@ -2,6 +2,7 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import './Nav.css';
 import App from './App';
+import Main_page from './Main_page';
 
 
 class Nav extends React.Component{
@@ -45,6 +46,7 @@ class Nav extends React.Component{
         if(this.state.userLoggedin){
             return(
                 <div>
+
                     <nav>
                         <div class="row">
                             <img src="resources/css/img/logo-white.png" alt="Omnifood logo" class="logo"/>
@@ -61,12 +63,14 @@ class Nav extends React.Component{
                             </ul>
                         </div>
                     </nav>
+
                     <App usersigningup={this.state.usersigningup} userLoggingin={this.state.userLoggingin} setUsername={this.setUsername}/>
                 </div>
             )
         }
         return(
             <div>
+
                 <nav>
                     <div class="row">
                         <img src="resources/css/img/logo-white.png" alt="Omnifood logo" class="logo"/>

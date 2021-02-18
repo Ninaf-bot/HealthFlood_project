@@ -13,6 +13,11 @@ class product_site(APIView):
             food_item_serialised=serializers.productserializer(food_item)
             return Response(food_item_serialised.data)
 
+class prduct_recommendation(APIView):
+    def post(self,request):
+        if request.method == 'POST':
+            userID=request.data['userID']
+            
 
 
 
