@@ -13,14 +13,16 @@ class Nav extends React.Component{
             usersigningup:false,
             username:'',
             password:'',
+            userID:'',
             userLoggedin:false,
+            url:'/Products/'
 
         }
-        this.setUsername=this.setUsername.bind(this)
+        
     }
 
-    setUsername=e=>{
-        this.setState({username:e,userLoggedin:true,userLoggingin: false})
+    setUser=(username,userID)=>{
+        this.setState({username:username,userID:userID,userLoggedin:true,userLoggingin: false})
         console.log(this.state)
         
     }
@@ -46,14 +48,14 @@ class Nav extends React.Component{
         if(this.state.userLoggedin){
             return(
                 <div>
-
+                    <header>
                     <nav>
                         <div class="row">
                             <img src="resources/css/img/logo-white.png" alt="Omnifood logo" class="logo"/>
                             <ul class="main-nav">
                                 <li><a href="#" onClick={this.home_onclick_handler} >Home</a></li>
-                                <li><a href="#">Food Delivery</a></li>
-                                <li><a href="#">Products</a></li>
+                                <li><a href='#'>Food Delivery</a></li>
+                                <li><a href={this.state.url}>Products</a></li>
                                 <li><a href="#">Our cities</a></li>
                                 <li>{this.state.username}</li>
                                 <li>
@@ -63,21 +65,21 @@ class Nav extends React.Component{
                             </ul>
                         </div>
                     </nav>
-
-                    <App usersigningup={this.state.usersigningup} userLoggingin={this.state.userLoggingin} setUsername={this.setUsername}/>
+                    </header>
+                    <App usersigningup={this.state.usersigningup} userLoggingin={this.state.userLoggingin} setUser={this.setUser}/>
                 </div>
             )
         }
         return(
             <div>
-
+                <header>
                 <nav>
                     <div class="row">
                         <img src="resources/css/img/logo-white.png" alt="Omnifood logo" class="logo"/>
                         <ul class="main-nav">
                             <li><a href="#" onClick={this.home_onclick_handler} >Home</a></li>
                             <li><a href="#">Food Delivery</a></li>
-                            <li><a href="#">Products</a></li>
+                            <li><a href={this.state.url}>Products</a></li>
                             <li><a href="#">Our cities</a></li>
                             <li>
                                 <button onClick={this.login_button_handler} >login</button>
@@ -86,7 +88,8 @@ class Nav extends React.Component{
                         </ul>
                     </div>
                 </nav>
-                <App usersigningup={this.state.usersigningup} userLoggingin={this.state.userLoggingin}  setUsername={this.setUsername}/>
+                </header>
+                <App usersigningup={this.state.usersigningup} userLoggingin={this.state.userLoggingin}  setUser={this.setUser}/>
             </div>
         )
 

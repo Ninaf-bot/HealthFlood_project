@@ -10,8 +10,9 @@ class Login extends React.Component{
         this.state={
             username:'',
             password:'',
+            userID:'',
             userLoggedin:false,
-            Invalid_credentials:''
+            Invalid_credentials:'',
         }
     }
 
@@ -21,7 +22,7 @@ class Login extends React.Component{
         await axios.post('http://127.0.0.1:8000/login/',this.state).then(res=>{
             console.log(res);
             if(res.data.loggedin==true){
-                this.props.setUsername(res.data.username);
+                this.props.setUser(res.data.username,res.data.userID);
                 this.setState({Invalid_credentials:''})
             }
             else{

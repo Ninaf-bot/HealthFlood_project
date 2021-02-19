@@ -11,13 +11,14 @@ class Main_page extends React.Component{
     render(){
         return(
             <div>
-                <header>
+                <section class='section-message'>
                     <div class="hero-text-box">
                         <h1>Goodbye junk food.<br/> Hello super healthy meals.</h1>
                         <a class="btn btn-full" href="#">I’m hungry </a>
                         <a class="btn btn-ghost" href="#">Show me more  </a>
                     </div>
-                </header>
+                </section>
+                
                 <section class="section-features">
                         <div class="row">
                             <h2>Get food fast &mdash; not fast food.</h2>

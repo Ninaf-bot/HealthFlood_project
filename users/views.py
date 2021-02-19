@@ -22,8 +22,10 @@ class login(APIView):
             login_user_data=request.data
             login_user=authenticate(username=login_user_data['username'],password=login_user_data['password'])
             if login_user!=None:
-                return Response({'username': login_user_data['username'], 'password': login_user_data['password'],
-                                 'loggedin':True})
+                return Response({'username': login_user_data['username'],
+                                 'password': login_user_data['password'],
+                                 'userID':login_user.id,
+                                 'loggedin': True})
             return  Response({'loggedin':False})
 
 

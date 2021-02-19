@@ -182,7 +182,7 @@ h2:after {
 
 header{
   background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url(img/hero.jpg);
-  height: 100vh;
+  height: 19vh;
   background-size: cover;
   background-position: center;
 }

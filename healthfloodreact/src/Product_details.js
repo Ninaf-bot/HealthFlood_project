@@ -2,7 +2,7 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import axios from 'axios';
 
-class Product extends React.Component{
+class Product_details extends React.Component{
     constructor(props){
         super(props);
         this.state={
@@ -40,4 +40,4 @@ class Product extends React.Component{
     }
     
 }
-export default Product
+export default Product_details

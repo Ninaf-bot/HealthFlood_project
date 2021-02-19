@@ -2,6 +2,8 @@ import React from 'react';
 import Signup from './Signup';
 import Login from './Login';
 import Main_page from './Main_page';
+import {BrowserRouter as Router,Switch,Route, Link} from 'react-router-dom';
+import Products from './Products'
 
 class App extends React.Component{
     constructor(props){
@@ -15,11 +17,24 @@ class App extends React.Component{
         }
         else if((this.props.usersigningup==false) & this.props.userLoggingin){
             return(
-                <Login setUsername={this.props.setUsername}/>
+                <Login setUser={this.props.setUser}/>
             )
         }
         return(
-            <Main_page/>
+            <div>
+                <Router>
+                <Switch>
+                    <Route path='/products'>
+                        <Products/>
+                    </Route>
+                    <Route exact path='/'>
+                        <Main_page/>
+                    </Route>
+                </Switch>
+                
+                </Router>
+            </div>
+            
         )
         
     }
